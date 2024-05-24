@@ -1,13 +1,13 @@
 package com.example.demo.domain.creationpatterns.singleton.entity;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Settings {
     // volatile 키워드는 instance 변수가 여러 스레드 간에 일관되게 보이도록 보장합니다.
     // 이는 변수의 값을 모든 스레드가 즉시 일관되게 볼 수 있도록 합니다.
     private static volatile Settings instance;
-
-    // private 생성자는 외부에서 이 클래스의 인스턴스를 생성하지 못하도록 합니다.
-    private Settings() {
-    }
 
     // 지연 로딩 (Lazy Initialization)
     public static Settings getInstance() {
