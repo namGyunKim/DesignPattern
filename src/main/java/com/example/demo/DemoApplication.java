@@ -1,10 +1,8 @@
 package com.example.demo;
 
-import com.example.demo.domain.singleton.entity.Settings;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.demo.domain.creationpatterns.singleton.entity.Settings;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
@@ -13,6 +11,6 @@ public class DemoApplication {
         Settings settings2 = Settings.getInstance();
         System.out.println(settings == settings2);
 
-        SpringApplication.run(DemoApplication.class, args);
+//        SpringApplication.run(DemoApplication.class, args);
     }
 }
